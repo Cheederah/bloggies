@@ -12,7 +12,7 @@ import {
   Loader
 } from "../../components";
 
-function postDetails({ post }) {
+function PostDetails({ post }) {
   const router = useRouter();
 
   if(router.isFallback) {
@@ -41,7 +41,7 @@ function postDetails({ post }) {
   );
 }
 
-export default postDetails;
+export default PostDetails;
 
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug);
